@@ -1,0 +1,12 @@
+{
+  "name": "ngm-storage",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "http://git.ucweb.local/chenwenxiao/ngm-storage.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.2"
+  }
+}

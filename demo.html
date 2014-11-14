@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<meta charset="utf8">
+	</head>
+	<body>
+    请打开控制台查看
+		<script>
+		  // 调试单个存储的配置
+		  window.useLocalStorage = true;
+		  window.useWebSQL = false;
+		  window.useIndexDB = true;
+		</script>
+
+		<script src="build/ngm-storage.js"></script>
+
+		<script>
+		  //var storage = new MultiStorage({});
+		  // or
+		  var storage = ModuleMgr.use("Storage.Mgr", {});
+
+		  // 测试格式
+		  storage.setItem("test-string", "this is string");
+		  storage.getItem("test-string", function(result) {
+			console.info(result);
+		  });
+
+		  storage.setItem("test-number", 1234567);
+		  storage.getItem("test-number", function(result) {
+			console.info(result);
+		  });
+
+		  storage.setItem("test-object", {name : "Hillman", job : "Not found!", year: 2014});
+		  storage.getItem("test-object", function(result) {
+			console.info(result);
+		  });
+
+		  storage.setItem("test-array", [1,2,"hillman", {year:2014,month:9, date:28}]);
+		  storage.getItem("test-array", function(result) {
+			console.info(result);
+		  });
+
+		  // 测试容量
+//		  storage.setItem("test-overflow1", new Array(1024*800).join("1"));
+//		  storage.setItem("test-overflow2", new Array(1024*800).join("2"));
+//		  storage.setItem("test-overflow3", new Array(1024*800).join("3"));
+//		  storage.setItem("test-overflow4", new Array(1024*800).join("4"));
+//		  storage.setItem("test-overflow5", new Array(1024*800).join("5"));
+//		  storage.setItem("test-overflow6", new Array(1024*800).join("6"));
+//		  storage.setItem("test-overflow7", new Array(1024*800).join("7"));
+//		  storage.setItem("test-overflow8", new Array(1024*800).join("8"));
+		</script>
+	</body>
+</html>
