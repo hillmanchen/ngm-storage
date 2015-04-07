@@ -5,7 +5,7 @@
  * 本地存储
  * @type {Storage.Mgr}
  */
-ModuleMgr.create("Storage.Mgr", function(_aoSuper, _aoMgr) {
+ModuleMgr.create("Storage.API", function(_aoSuper, _aoMgr) {
 
   // CONST
   var CFG_KEY = "stOraGE-_-CFG";
@@ -352,4 +352,4 @@ ModuleMgr.create("Storage.Mgr", function(_aoSuper, _aoMgr) {
   };
 });
 
-window.$storage = ModuleMgr.use("Storage.Mgr", {});
+window.$storage = ModuleMgr.use("Storage.API", {});

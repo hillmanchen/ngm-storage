@@ -11,19 +11,20 @@
 		  window.useIndexDB = true;
 		</script>
 
-		<!--<script src="build/ngm-storage.js"></script>-->
-
-		<script src="src/builder.js"></script>
-		<script src="src/base.js"></script>
-		<script src="src/localStorage.js"></script>
-		<script src="src/webSQL.js"></script>
-		<script src="src/indexedDB.js"></script>
-		<script src="src/mgr.js"></script>
+		<script src="build/ngm-storage.js"></script>
+		<!--<script src="src/common/moduleMgr.js"></script>-->
+		<!--<script src="src/modules/base.js"></script>-->
+		<!--<script src="src/modules/localStorage.js"></script>-->
+		<!--<script src="src/modules/webSQL.js"></script>-->
+		<!--<script src="src/modules/indexedDB.js"></script>-->
+		<!--<script src="src/api.js"></script>-->
 
 		<script>
 		  //var storage = new MultiStorage({});
 		  // or
-		  var storage = ModuleMgr.use("Storage.Mgr", {});
+		  //var storage = ModuleMgr.use("Storage.API", {});
+		  // or
+		  var storage = window.$storage;
 
 		  // 测试格式
 		  storage.setItem("test-string", "this is string");

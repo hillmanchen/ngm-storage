@@ -11,12 +11,12 @@ module.exports = function (grunt) {
         files: {
           'build/ngm-storage.js': [
             // 有顺序要求
-            './src/builder.js',
-            './src/base.js',
-            './src/localStorage.js',
-            './src/webSQL.js',
-            './src/indexedDB.js',
-            './src/mgr.js'
+            './src/common/moduleMgr.js',
+            './src/modules/base.js',
+            './src/modules/localStorage.js',
+            './src/modules/webSQL.js',
+            './src/modules/indexedDB.js',
+            './src/api.js'
           ]
         },
         options: {
