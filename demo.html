@@ -7,11 +7,18 @@
 		<script>
 		  // 调试单个存储的配置
 		  window.useLocalStorage = true;
-		  window.useWebSQL = false;
+		  window.useWebSQL = true;
 		  window.useIndexDB = true;
 		</script>
 
-		<script src="build/ngm-storage.js"></script>
+		<!--<script src="build/ngm-storage.js"></script>-->
+
+		<script src="src/builder.js"></script>
+		<script src="src/base.js"></script>
+		<script src="src/localStorage.js"></script>
+		<script src="src/webSQL.js"></script>
+		<script src="src/indexedDB.js"></script>
+		<script src="src/mgr.js"></script>
 
 		<script>
 		  //var storage = new MultiStorage({});
@@ -40,14 +47,14 @@
 		  });
 
 		  // 测试容量
-//		  storage.setItem("test-overflow1", new Array(1024*800).join("1"));
-//		  storage.setItem("test-overflow2", new Array(1024*800).join("2"));
-//		  storage.setItem("test-overflow3", new Array(1024*800).join("3"));
-//		  storage.setItem("test-overflow4", new Array(1024*800).join("4"));
-//		  storage.setItem("test-overflow5", new Array(1024*800).join("5"));
-//		  storage.setItem("test-overflow6", new Array(1024*800).join("6"));
-//		  storage.setItem("test-overflow7", new Array(1024*800).join("7"));
-//		  storage.setItem("test-overflow8", new Array(1024*800).join("8"));
+		  storage.setItem("test-overflow1", new Array(1024*800).join("1"));
+		  storage.setItem("test-overflow2", new Array(1024*800).join("2"));
+		  storage.setItem("test-overflow3", new Array(1024*800).join("3"));
+		  storage.setItem("test-overflow4", new Array(1024*800).join("4"));
+		  storage.setItem("test-overflow5", new Array(1024*800).join("5"));
+		  storage.setItem("test-overflow6", new Array(1024*800).join("6"));
+		  storage.setItem("test-overflow7", new Array(1024*800).join("7"));
+		  storage.setItem("test-overflow8", new Array(1024*800).join("8"));
 		</script>
 	</body>
 </html>

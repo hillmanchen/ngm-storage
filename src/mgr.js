@@ -221,17 +221,18 @@ ModuleMgr.create("Storage.Mgr", function(_aoSuper, _aoMgr) {
     if (!_asStatus) {
       throw "status not found in [Storage.updateInfo]"
     }
-    // 删idx
-    this.deleteIdx_(_asKey);
-    // 前插idx（更新热度）
-    _oCfg.index.unshift(_asKey);
-
     // 存储代理发生变化
     if (_oCfg.info[_asKey] && _oCfg.info[_asKey].type != _asType) {
       console.error("存储代理发生变化：" + _oCfg.info[_asKey].type + ">" + _asType );
       // 从旧的存储器里面去掉
       this.getHandler_(_oCfg.info[_asKey].type).onDeleteData(_asKey);
     }
+
+
+    // 删idx
+    this.deleteIdx_(_asKey);
+    // 前插idx（更新热度）
+    _oCfg.index.unshift(_asKey);
 
     // 更新info
     _oCfg.info[_asKey] = {
